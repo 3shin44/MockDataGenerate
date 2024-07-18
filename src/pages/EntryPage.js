@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
 
 function EntryPage() {
-    let [count, setCount] = useState(0)
+  let [count, setCount] = useState(0);
 
-    const addCount = () => {
-        setCount(count++)
-    }
+  const addCount = () => {
+    setCount(++count);
+  };
 
-    return (
-        <button
-            onClick={addCount}
-        >
-            CLICK ME: {count}
-        </button>
-    )
+  return <button onClick={addCount}>CLICK ME: {count}</button>;
 }
 
-export default EntryPage
+export default EntryPage;

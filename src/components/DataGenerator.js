@@ -1,30 +1,39 @@
-import React, { useState } from 'react';
-import { Button, TextField, Grid, MenuItem } from '@mui/material';
-import OptionField from './OptionField';
+import React, { useState } from "react";
+import { Button, TextField, Grid, MenuItem } from "@mui/material";
+import OptionField from "./OptionField";
 
 const DataGenerator = () => {
-  const [options, setOptions] = useState([{ id: 1, type: 'time', value: '' }]);
+  const [options, setOptions] = useState([{ id: 1, type: "time", value: "" }]);
   const [dataCount, setDataCount] = useState(1);
 
   const addOption = () => {
-    setOptions([...options, { id: options.length + 1, type: 'time', value: '' }]);
+    setOptions([
+      ...options,
+      { id: options.length + 1, type: "time", value: "" },
+    ]);
   };
 
   const removeOption = (id) => {
-    setOptions(options.filter(option => option.id !== id));
+    setOptions(options.filter((option) => option.id !== id));
   };
 
   const handleOptionChange = (id, newType, newValue) => {
-    setOptions(options.map(option => option.id === id ? { ...option, type: newType, value: newValue } : option));
+    setOptions(
+      options.map((option) =>
+        option.id === id
+          ? { ...option, type: newType, value: newValue }
+          : option,
+      ),
+    );
   };
 
   const generateData = () => {
     const data = Array.from({ length: dataCount }, (_, i) => {
       const record = {};
-      options.forEach(option => {
-        if (option.type === 'time') {
+      options.forEach((option) => {
+        if (option.type === "time") {
           record[option.type] = new Date().toISOString();
-        } else if (option.type === 'index') {
+        } else if (option.type === "index") {
           record[option.type] = i + 1;
         } else {
           record[option.type] = option.value;
@@ -47,7 +56,9 @@ const DataGenerator = () => {
           onRemove={removeOption}
         />
       ))}
-      <Button variant="outlined" onClick={addOption}>Add Option</Button>
+      <Button variant="outlined" onClick={addOption}>
+        Add Option
+      </Button>
       <TextField
         label="Number of Records"
         type="number"

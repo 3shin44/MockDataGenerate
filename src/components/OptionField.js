@@ -1,6 +1,6 @@
-import React from 'react';
-import { Grid, TextField, MenuItem, IconButton } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
+import React from "react";
+import { Grid, TextField, MenuItem, IconButton } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const OptionField = ({ id, type, value, onChange, onRemove }) => {
   const handleTypeChange = (event) => {
@@ -32,7 +32,7 @@ const OptionField = ({ id, type, value, onChange, onRemove }) => {
           value={value}
           onChange={handleValueChange}
           fullWidth
-          disabled={type === 'time' || type === 'index'}
+          disabled={type === "time" || type === "index"}
         />
       </Grid>
       <Grid item xs={2}>
