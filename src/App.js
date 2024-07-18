@@ -1,10 +1,11 @@
 import React from 'react';
-import DataGenerator from './components/DataGenerator';
+// import DataGenerator from './components/DataGenerator';
+import EntryPage from './pages/EntryPage';
 
 function App() {
   return (
     <div className="App">
-      <DataGenerator></DataGenerator>
+      <EntryPage></EntryPage>
     </div>
   );
 }
