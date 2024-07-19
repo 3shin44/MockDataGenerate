@@ -1,5 +1,5 @@
 {
-  "COMMENT": "使用@作為根目錄替換字元, 避免路徑變動",
+  "COMMENT": "使用@作為根目錄替換字元, 避免路徑變動 (好像沒效欸)",
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
