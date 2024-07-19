@@ -1,13 +1,23 @@
 import React from "react";
-// import DataGenerator from './components/DataGenerator';
-import EntryPage from "./pages/EntryPage";
-import ChangeStr from "./components/ChangeStr";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import pageList from "./pages/pageList";
 
 function App() {
   return (
     <div className="App">
-      <EntryPage></EntryPage>
-      <ChangeStr></ChangeStr>
+    <Router>
+      <Routes>
+        {
+          pageList.map((pageItem, index)=>(
+            <Route 
+            key={index}
+            path={pageItem.path}
+            element={<pageItem.componentName />}
+            />
+          ))
+        }
+      </Routes>
+    </Router>
     </div>
   );
 }
