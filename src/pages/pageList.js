@@ -1,5 +1,6 @@
 import EntryPage from "./EntryPage";
-import OtherPage from "./OtherPage";
+import EditPanelPage from "./EditPanelPage";
+
 // 產生頁面頁表, 供ROUTER使用
 const pageList = [
   {
@@ -7,8 +8,8 @@ const pageList = [
     componentName: EntryPage,
   },
   {
-    path: "/other",
-    componentName: OtherPage,
+    path: "/editPanel",
+    componentName: EditPanelPage,
   },
 ];
 

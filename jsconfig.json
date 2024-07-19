@@ -1,0 +1,9 @@
+{
+  "COMMENT": "使用@作為根目錄替換字元, 避免路徑變動",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
+  }
+}

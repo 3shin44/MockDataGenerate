@@ -4,12 +4,13 @@ function EntryPage() {
   let [count, setCount] = useState(0);
 
   const addCount = () => {
-    setCount(++count);
+    count++;
+    setCount(count);
   };
 
   return (
     <div>
-      <div>THIS IS OTHER PAGE</div>
+      <div>THIS IS ENTRY PAGE</div>
       <button onClick={addCount}>CLICK ME: {count}</button>
     </div>
   );
