@@ -9,8 +9,8 @@ function EntryPage() {
 
   return (
     <div>
-        <div>THIS IS ENTRY PAGE</div>
-        <button onClick={addCount}>CLICK ME: {count}</button>
+      <div>THIS IS ENTRY PAGE</div>
+      <button onClick={addCount}>CLICK ME: {count}</button>
     </div>
   );
 }
