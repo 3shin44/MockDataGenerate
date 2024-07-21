@@ -10,7 +10,10 @@ const moduleCfg = [
     displayName: "迴圈索引值",
     moduleType: "loopIndex",
     holderText: "使用迴圈索引值",
-    description: "使用迴圈索引值, 可傳入計算式, 如: +1, +100",
+    description:
+      "使用迴圈索引值, 可傳入計算式, 如: +1, +101 <br>  " +
+      "INPUT: +1, OUTPUT: 1  <br>  " +
+      "INPUT: +101, OUTPUT: 101  ",
   },
   {
     displayName: "時間(Moment)",
@@ -19,8 +22,8 @@ const moduleCfg = [
     description:
       "傳入Moment.js語法<br>  " +
       "基礎用法: .format('YYYY/MM/DD') 指定日期格式 <br>  " +
-      "進階用法: 傳入迴圈索引值'$index', 遞增日期 .add('$index', 'd') <br>  " +
-      "官方說明: <a href='https://momentjs.com/'>momentjs</a>",
+      "模擬資料產生器: 傳入迴圈索引值'$index', 配合原生語法遞增日期 .add('$index', 'd') <br>  " +
+      "更多語法參考官方說明: <a href='https://momentjs.com/'>momentjs</a>",
   },
   // 多一組鎖定, 不須自定義參數
   {

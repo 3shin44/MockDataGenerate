@@ -46,6 +46,7 @@
   },
   "homepage": "https://3shin44.github.io/mock-data-generate",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "gh-pages": "^6.1.1",
     "prettier": "^3.3.3"
   }
