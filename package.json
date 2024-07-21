@@ -22,7 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,scss,md}'"
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,scss,md}'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,8 +44,9 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "./",
+  "homepage": "https://3shin44.github.io/mock-data-generate",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "prettier": "^3.3.3"
   }
 }
