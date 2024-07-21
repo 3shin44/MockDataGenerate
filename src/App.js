@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import pageList from "./pages/pageList";
 
 // 需依據部屬環境設定 URL
-const basename = "/mock-data-generate";
+const getPublicURL = process.env.PUBLIC_URL
+const basename = process.env.DEPLOY_TARGET === "github" ? "/mock-data-generate" : getPublicURL;
 
 function App() {
   return (
